@@ -247,6 +247,21 @@ void print(){
 	if (P==2)
 	cout << "Appointment: UNDER_CONST"<< endl;
 	}
+	
+void full_print(){
+	cout<<"Owner`s srnm: "<<F.get_surname()<<endl;
+	cout<<"Owner`s nm: "<<F.get_name()<<endl;
+	cout<<"Owner`s dt: "<<F.get_date()<<endl;
+	cout<<"Desc ground level: "<<A.get_ground_level()<<endl;
+	cout<<"Desc ground type: "<<A.get_ground_type()<<endl;
+	cout <<"Price: " << price << endl;
+	if (P==0)
+	cout << "Appointment: RESERVED"<< endl;
+	if (P==1)
+	cout << "Appointment: FOR_SILGOSP"<< endl;
+	if (P==2)
+	cout << "Appointment: UNDER_CONST"<< endl;
+	}	
 };
 
 
@@ -401,12 +416,18 @@ int main(){
 	Description d3("Garniy grunt", 7, arr, 3);
 	Zem_dil ex4;
 	Zem_dil ex3(e3, d3, 999999, UNDER_CONST);
-	Zem_dil *arrayy = new Zem_dil[2];
 	
 	Zem_dil *array = new Zem_dil[1];
 	array[0] = ex3;
-	
 	cout<<endl<<endl;
+	
+	cout<<"Ex3 full print:"<<endl;
+	ex3.full_print();
+	cout<<endl<<endl;
+	int rd=0;
+	cout<<"ready?";
+	cin>>rd;
+	
 	cout<<"Punkt print:"<<endl;
 	Punkt p1(array, 1);
 	
@@ -415,8 +436,11 @@ int main(){
 	
 	cout<<"Punkt print + 1:"<<endl;
 	p1.add(ex4);
-	
 	p1.print();
-
+	cout<<endl<<endl;
+	
+	/*cout<<"Ex4 full print:"<<endl;
+	ex4.full_print();
+	cout<<endl<<endl;*/
 	return 0;
 }
