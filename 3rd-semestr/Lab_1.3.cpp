@@ -400,7 +400,7 @@ int main(){
 	ex2.print();
 	cout<<endl<<endl;
 	
-	int *ar = new int[2];
+	int *ar = new int[10];
 	int n;
 	cout<<"Input size of array: ";
 	cin>>n;
@@ -411,13 +411,13 @@ int main(){
 	cout<<endl<<endl;
 	Owner e3("Ivan", "Khropach", "4.07.1922");
 	
-	int *arr = new int[1];
+	int *arr = new int[10];
 	
 	Description d3("Garniy grunt", 7, arr, 3);
 	Zem_dil ex4;
 	Zem_dil ex3(e3, d3, 999999, UNDER_CONST);
 	
-	Zem_dil *array = new Zem_dil[1];
+	Zem_dil *array = new Zem_dil[10];
 	array[0] = ex3;
 	cout<<endl<<endl;
 	
@@ -439,8 +439,8 @@ int main(){
 	p1.print();
 	cout<<endl<<endl;
 	
-	/*cout<<"Ex4 full print:"<<endl;
+	cout<<"Ex4 full print:"<<endl;
 	ex4.full_print();
-	cout<<endl<<endl;*/
+	cout<<endl<<endl;
 	return 0;
 }
